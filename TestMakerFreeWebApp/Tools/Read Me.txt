@@ -1,0 +1,1 @@
+If the NPM sub-packages fail to download, copy the update-npm.bat file into the packages folder and run it to download the packages sub-packages
