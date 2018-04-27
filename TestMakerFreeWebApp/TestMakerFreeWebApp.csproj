@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Mapster" Version="3.1.8" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
@@ -37,6 +37,7 @@
     <None Remove="ClientApp\app\components\question\question-list.component.ts" />
     <None Remove="ClientApp\app\components\quiz\quiz-edit.component.ts" />
     <None Remove="ClientApp\app\components\quiz\quiz-list.component.ts" />
+    <None Remove="ClientApp\app\components\quiz\quiz-search.component.ts" />
     <None Remove="ClientApp\app\components\quiz\quiz.component.ts" />
     <None Remove="ClientApp\app\components\result\result-edit.component.ts" />
     <None Remove="ClientApp\app\components\result\result-list.component.ts" />
@@ -56,6 +57,7 @@
     <TypeScriptCompile Include="ClientApp\app\components\question\question-list.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\quiz\quiz-edit.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\quiz\quiz-list.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\quiz\quiz-search.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\quiz\quiz.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\result\result-list.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\result\result-edit.component.ts" />

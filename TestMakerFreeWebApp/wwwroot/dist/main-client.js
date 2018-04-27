@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d84c877c6e1fadd987b7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ee7d7729e0dec42c74e4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -631,9 +631,7 @@
 /******/ 		}
 /******/ 	
 /******/ 		hotSetStatus("idle");
-/******/ 		return new Promise(function(resolve) {
-/******/ 			resolve(outdatedModules);
-/******/ 		});
+/******/ 		return Promise.resolve(outdatedModules);
 /******/ 	}
 /******/
 /******/ 	// The module cache
@@ -706,7 +704,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(90)(__webpack_require__.s = 90);
+/******/ 	return hotCreateRequire(94)(__webpack_require__.s = 94);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -719,7 +717,7 @@ module.exports = (__webpack_require__(1))(4);
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = vendor_c2b109bcdfbd4d467996;
+module.exports = vendor_473c8c1d4c02ee388bf9;
 
 /***/ }),
 /* 2 */
@@ -839,17 +837,17 @@ function toComment(sourceMap) {
 /* unused harmony export ɵe */
 /* unused harmony export ɵf */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_tslib__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_tslib__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__);
 /**
  * @license Angular v5.0.2
@@ -3573,8 +3571,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app',
-            template: __webpack_require__(47),
-            styles: [__webpack_require__(62)]
+            template: __webpack_require__(55),
+            styles: [__webpack_require__(71)]
         })
     ], AppComponent);
     return AppComponent;
@@ -3782,7 +3780,7 @@ module.exports = Html5Entities;
 /* 7 */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\r\n<div class=\"result-edit\">\r\n    <div>\r\n        <label for=\"text\">Result text:</label>\r\n        <br />\r\n        <textarea id=\"text\" [(ngModel)]=\"result.Text\" placeholder=\"Enter a suitable text...\"></textarea>\r\n    </div>\r\n    <div>\r\n        <label for=\"MinValue\">Minimum Score Value:</label>\r\n        <br />\r\n        <input type=\"number\" id=\"MinValue\" name=\"MinValue\" [(ngModel)]=\"result.MinValue\" />\r\n    </div>\r\n    <div>\r\n        <label for=\"MaxValue\">Maximum Score Value:</label>\r\n        <br />\r\n        <input type=\"number\" id=\"MaxValue\" name=\"MaxValue\" [(ngModel)]=\"result.MaxValue\" />\r\n    </div>\r\n    <div>\r\n        <input *ngIf=\"editMode\" type=\"button\" value=\"Apply Changes\" (click)=\"onSubmit(result)\" />\r\n        <input *ngIf=\"!editMode\" type=\"button\" value=\"Create the Result!\" (click)=\"onSubmit(result)\"/>\r\n        <input type=\"button\" value=\"Cancel\" (click)=\"onBack()\"/>\r\n    </div>\r\n</div>";
+module.exports = "<h2>{{title}}</h2>\r\n<div class=\"result-edit\">\r\n    <div class=\"form-group\">\r\n        <label for=\"text\">Result text:</label>\r\n        <br />\r\n        <textarea id=\"text\" [(ngModel)]=\"result.Text\" placeholder=\"Enter a suitable text...\" class=\"form-control\"></textarea>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"MinValue\">Minimum Score Value:</label>\r\n        <br />\r\n        <input type=\"number\" id=\"MinValue\" name=\"MinValue\" [(ngModel)]=\"result.MinValue\" class=\"form-control\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"MaxValue\">Maximum Score Value:</label>\r\n        <br />\r\n        <input type=\"number\" id=\"MaxValue\" name=\"MaxValue\" [(ngModel)]=\"result.MaxValue\" class=\"form-control\"/>\r\n    </div>\r\n    <div>\r\n        <button *ngIf=\"editMode\" (click)=\"onSubmit(result)\" class=\"btn btn-sm btn-success\">\r\n            <span class=\"glyphicon glyphicon-save\"></span>\r\n            Apply Changes\r\n        </button>\r\n        <button *ngIf=\"!editMode\" (click)=\"onSubmit(result)\" class=\"btn btn-sm btn-success\">\r\n            <span class=\"glyphicon glyphicon-save\"></span>\r\n            Create the Result!\r\n        </button>\r\n        <input type=\"button\" value=\"Cancel\" (click)=\"onBack()\" class=\"btn btn-sm btn-primary\"/>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 8 */
@@ -3796,15 +3794,15 @@ module.exports = (__webpack_require__(1))(9);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reflect_metadata__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_zone_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_browser_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_browser_module__ = __webpack_require__(20);
 
 
 
@@ -3847,7 +3845,7 @@ var options = {
   autoConnect: true
 };
 if (true) {
-  var querystring = __webpack_require__(76);
+  var querystring = __webpack_require__(15);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   setOverrides(overrides);
 }
@@ -3981,11 +3979,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(59);
+  var strip = __webpack_require__(68);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(71);
+    overlay = __webpack_require__(81);
   }
 
   var styles = {
@@ -4038,7 +4036,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(72);
+var processUpdate = __webpack_require__(82);
 
 var customHandler;
 var subscribeAllHandler;
@@ -4104,7 +4102,7 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(73)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(17)(module)))
 
 /***/ }),
 /* 11 */
@@ -4114,6 +4112,445 @@ module.exports = (__webpack_require__(1))(48);
 
 /***/ }),
 /* 12 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+// If obj.hasOwnProperty has been overridden, then calling
+// obj.hasOwnProperty(prop) will break.
+// See: https://github.com/joyent/node/issues/1707
+function hasOwnProperty(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
+module.exports = function(qs, sep, eq, options) {
+  sep = sep || '&';
+  eq = eq || '=';
+  var obj = {};
+
+  if (typeof qs !== 'string' || qs.length === 0) {
+    return obj;
+  }
+
+  var regexp = /\+/g;
+  qs = qs.split(sep);
+
+  var maxKeys = 1000;
+  if (options && typeof options.maxKeys === 'number') {
+    maxKeys = options.maxKeys;
+  }
+
+  var len = qs.length;
+  // maxKeys <= 0 means that we should not limit keys count
+  if (maxKeys > 0 && len > maxKeys) {
+    len = maxKeys;
+  }
+
+  for (var i = 0; i < len; ++i) {
+    var x = qs[i].replace(regexp, '%20'),
+        idx = x.indexOf(eq),
+        kstr, vstr, k, v;
+
+    if (idx >= 0) {
+      kstr = x.substr(0, idx);
+      vstr = x.substr(idx + 1);
+    } else {
+      kstr = x;
+      vstr = '';
+    }
+
+    k = decodeURIComponent(kstr);
+    v = decodeURIComponent(vstr);
+
+    if (!hasOwnProperty(obj, k)) {
+      obj[k] = v;
+    } else if (isArray(obj[k])) {
+      obj[k].push(v);
+    } else {
+      obj[k] = [obj[k], v];
+    }
+  }
+
+  return obj;
+};
+
+var isArray = Array.isArray || function (xs) {
+  return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+var stringifyPrimitive = function(v) {
+  switch (typeof v) {
+    case 'string':
+      return v;
+
+    case 'boolean':
+      return v ? 'true' : 'false';
+
+    case 'number':
+      return isFinite(v) ? v : '';
+
+    default:
+      return '';
+  }
+};
+
+module.exports = function(obj, sep, eq, name) {
+  sep = sep || '&';
+  eq = eq || '=';
+  if (obj === null) {
+    obj = undefined;
+  }
+
+  if (typeof obj === 'object') {
+    return map(objectKeys(obj), function(k) {
+      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
+      if (isArray(obj[k])) {
+        return map(obj[k], function(v) {
+          return ks + encodeURIComponent(stringifyPrimitive(v));
+        }).join(sep);
+      } else {
+        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
+      }
+    }).join(sep);
+
+  }
+
+  if (!name) return '';
+  return encodeURIComponent(stringifyPrimitive(name)) + eq +
+         encodeURIComponent(stringifyPrimitive(obj));
+};
+
+var isArray = Array.isArray || function (xs) {
+  return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+function map (xs, f) {
+  if (xs.map) return xs.map(f);
+  var res = [];
+  for (var i = 0; i < xs.length; i++) {
+    res.push(f(xs[i], i));
+  }
+  return res;
+}
+
+var objectKeys = Object.keys || function (obj) {
+  var res = [];
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
+  }
+  return res;
+};
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.decode = exports.parse = __webpack_require__(13);
+exports.encode = exports.stringify = __webpack_require__(14);
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if(!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4296,7 +4733,7 @@ ansiHTML.reset()
 
 
 /***/ }),
-/* 13 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4307,15 +4744,15 @@ module.exports = function () {
 
 
 /***/ }),
-/* 14 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* unused harmony export getBaseUrl */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_shared_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_shared_module__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(5);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4351,37 +4788,39 @@ function getBaseUrl() {
 
 
 /***/ }),
-/* 15 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModuleShared; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_app_app_component__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navmenu_navmenu_component__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_home_home_component__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_quiz_quiz_list_component__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_quiz_quiz_component__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_quiz_quiz_edit_component__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_about_about_component__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_login_login_component__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_pagenotfound_pagenotfound_component__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_question_question_list_component__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_question_question_edit_component__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_answer_answer_list_component__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_answer_answer_edit_component__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_result_result_list_component__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_result_result_edit_component__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navmenu_navmenu_component__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_home_home_component__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_quiz_quiz_list_component__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_quiz_quiz_component__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_quiz_quiz_edit_component__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_about_about_component__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_login_login_component__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_pagenotfound_pagenotfound_component__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_question_question_list_component__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_question_question_edit_component__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_answer_answer_list_component__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_answer_answer_edit_component__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_result_result_list_component__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_result_result_edit_component__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_quiz_quiz_search_component__ = __webpack_require__(33);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -4422,7 +4861,8 @@ var AppModuleShared = (function () {
                 __WEBPACK_IMPORTED_MODULE_16__components_answer_answer_list_component__["a" /* AnswerListComponent */],
                 __WEBPACK_IMPORTED_MODULE_17__components_answer_answer_edit_component__["a" /* AnswerEditComponent */],
                 __WEBPACK_IMPORTED_MODULE_18__components_result_result_list_component__["a" /* ResultListComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_result_result_edit_component__["a" /* ResultEditComponent */]
+                __WEBPACK_IMPORTED_MODULE_19__components_result_result_edit_component__["a" /* ResultEditComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_quiz_quiz_search_component__["a" /* QuizSearchComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
@@ -4453,7 +4893,7 @@ var AppModuleShared = (function () {
 
 
 /***/ }),
-/* 16 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4473,7 +4913,7 @@ var AboutComponent = (function () {
     AboutComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "about",
-            template: __webpack_require__(44)
+            template: __webpack_require__(52)
         })
     ], AboutComponent);
     return AboutComponent;
@@ -4482,7 +4922,7 @@ var AboutComponent = (function () {
 
 
 /***/ }),
-/* 17 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4554,8 +4994,8 @@ var AnswerEditComponent = (function () {
     AnswerEditComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "answer-edit",
-            template: __webpack_require__(45),
-            styles: [__webpack_require__(60)]
+            template: __webpack_require__(53),
+            styles: [__webpack_require__(69)]
         }),
         __param(3, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */],
@@ -4568,7 +5008,7 @@ var AnswerEditComponent = (function () {
 
 
 /***/ }),
-/* 18 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4640,8 +5080,8 @@ var AnswerListComponent = (function () {
     AnswerListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "answer-list",
-            template: __webpack_require__(46),
-            styles: [__webpack_require__(61)]
+            template: __webpack_require__(54),
+            styles: [__webpack_require__(70)]
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], String, __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]])
@@ -4652,7 +5092,7 @@ var AnswerListComponent = (function () {
 
 
 /***/ }),
-/* 19 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4671,8 +5111,8 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'home',
-            template: __webpack_require__(48),
-            styles: [__webpack_require__(63)]
+            template: __webpack_require__(56),
+            styles: [__webpack_require__(72)]
         })
     ], HomeComponent);
     return HomeComponent;
@@ -4681,7 +5121,7 @@ var HomeComponent = (function () {
 
 
 /***/ }),
-/* 20 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4701,7 +5141,7 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "login",
-            template: __webpack_require__(49)
+            template: __webpack_require__(57)
         })
     ], LoginComponent);
     return LoginComponent;
@@ -4710,7 +5150,7 @@ var LoginComponent = (function () {
 
 
 /***/ }),
-/* 21 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4729,8 +5169,8 @@ var NavMenuComponent = (function () {
     NavMenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'nav-menu',
-            template: __webpack_require__(50),
-            styles: [__webpack_require__(64)]
+            template: __webpack_require__(58),
+            styles: [__webpack_require__(73)]
         })
     ], NavMenuComponent);
     return NavMenuComponent;
@@ -4739,7 +5179,7 @@ var NavMenuComponent = (function () {
 
 
 /***/ }),
-/* 22 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4759,7 +5199,7 @@ var PageNotFoundComponent = (function () {
     PageNotFoundComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "pagenotfound",
-            template: __webpack_require__(51)
+            template: __webpack_require__(59)
         })
     ], PageNotFoundComponent);
     return PageNotFoundComponent;
@@ -4768,7 +5208,7 @@ var PageNotFoundComponent = (function () {
 
 
 /***/ }),
-/* 23 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4840,8 +5280,8 @@ var QuestionEditComponent = (function () {
     QuestionEditComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "question-edit",
-            template: __webpack_require__(52),
-            styles: [__webpack_require__(65)]
+            template: __webpack_require__(60),
+            styles: [__webpack_require__(74)]
         }),
         __param(3, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"],
@@ -4854,7 +5294,7 @@ var QuestionEditComponent = (function () {
 
 
 /***/ }),
-/* 24 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4925,8 +5365,8 @@ var QuestionListComponent = (function () {
     QuestionListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "question-list",
-            template: __webpack_require__(53),
-            styles: [__webpack_require__(66)]
+            template: __webpack_require__(61),
+            styles: [__webpack_require__(75)]
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], String, __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]])
@@ -4937,7 +5377,7 @@ var QuestionListComponent = (function () {
 
 
 /***/ }),
-/* 25 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5007,8 +5447,8 @@ var QuizEditComponent = (function () {
     QuizEditComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "quiz-edit",
-            template: __webpack_require__(54),
-            styles: [__webpack_require__(67)]
+            template: __webpack_require__(62),
+            styles: [__webpack_require__(76)]
         }),
         __param(3, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"],
@@ -5021,7 +5461,7 @@ var QuizEditComponent = (function () {
 
 
 /***/ }),
-/* 26 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5089,8 +5529,8 @@ var QuizListComponent = (function () {
     QuizListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "quiz-list",
-            template: __webpack_require__(55),
-            styles: [__webpack_require__(68)]
+            template: __webpack_require__(63),
+            styles: [__webpack_require__(77)]
         }),
         __param(2, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */],
@@ -5102,7 +5542,47 @@ var QuizListComponent = (function () {
 
 
 /***/ }),
-/* 27 */
+/* 33 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuizSearchComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var QuizSearchComponent = (function () {
+    function QuizSearchComponent() {
+    }
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], QuizSearchComponent.prototype, "class", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], QuizSearchComponent.prototype, "placeholder", void 0);
+    QuizSearchComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: "quiz-search",
+            template: __webpack_require__(64),
+            styles: [__webpack_require__(78)]
+        })
+    ], QuizSearchComponent);
+    return QuizSearchComponent;
+}());
+
+
+
+/***/ }),
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5165,8 +5645,8 @@ var QuizComponent = (function () {
     QuizComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "quiz",
-            template: __webpack_require__(56),
-            styles: [__webpack_require__(69)]
+            template: __webpack_require__(65),
+            styles: [__webpack_require__(79)]
         }),
         __param(3, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"],
@@ -5179,7 +5659,7 @@ var QuizComponent = (function () {
 
 
 /***/ }),
-/* 28 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5262,7 +5742,7 @@ var ResultEditComponent = (function () {
 
 
 /***/ }),
-/* 29 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5333,8 +5813,8 @@ var ResultListComponent = (function () {
     ResultListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "result-list",
-            template: __webpack_require__(57),
-            styles: [__webpack_require__(70)]
+            template: __webpack_require__(66),
+            styles: [__webpack_require__(80)]
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], String, __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]])
@@ -5342,104 +5822,6 @@ var ResultListComponent = (function () {
     return ResultListComponent;
 }());
 
-
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".answer-edit textarea{\r\n    min-width: 500px;\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "table.answers{\r\n    min-width: 500px;\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    .body-content {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "quiz-list{\r\n    width:400px;\r\n    display:block;\r\n    padding:2px 20px;\r\n    margin:0px 5px;\r\n    float:left;\r\n}\r\n\r\nquiz-list.latest{\r\n    background-color: #f0f0f0;\r\n}\r\n\r\nquiz-list.byTitle{\r\n    background-color: #e0e0e0;\r\n}\r\n\r\nquiz-list.random{\r\n    background-color: #d0d0d0;\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\nli.link-active a,\r\nli.link-active a:hover,\r\nli.link-active a:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .navbar-header {\r\n        float: none;\r\n    }\r\n    .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .navbar ul {\r\n        float: none;\r\n    }\r\n    .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".question-edit textarea{\r\n    min-width: 500px;\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "table.questions{\r\n    min-width:500px;\r\n}", ""]);
-
-// exports
 
 
 /***/ }),
@@ -5451,7 +5833,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, ".quiz-edit input[type=\"text\"],\r\n.quiz-edit textarea{\r\n    min-width: 500px;\r\n}", ""]);
+exports.push([module.i, ".answer-edit {\n  width: 80%;\n}\n@media (max-width: 767px) {\n  .answer-edit {\n    width: 100%;\n  }\n}\n.answer-edit textarea {\n  min-height: 100px;\n}\n.answer-edit select {\n  max-width: 200px;\n}\n.answer-edit .commands {\n  margin-top: 20px;\n}\n", ""]);
 
 // exports
 
@@ -5465,7 +5847,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "ul.quizzes li{\r\n    color:#000acb;\r\n    cursor: pointer;\r\n}\r\n\r\nul.quizzes li.selected{\r\n    background-color: #cccccc;\r\n}", ""]);
+exports.push([module.i, ".table thead tr th {\n  border-bottom: 2px solid #ecf0f1;\n}\n", ""]);
 
 // exports
 
@@ -5479,7 +5861,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, ".quiz{\r\n    margin: 5px;\r\n    padding: 5px 10px;\r\n    border: 1px solid black;\r\n    background-color: #dddddd;\r\n    width: 300px;\r\n}\r\n\r\n.quiz* {\r\n    vertical-align: middle\r\n}\r\n\r\n.quiz ul li{\r\n    padding: 5px 0;\r\n}", ""]);
+exports.push([module.i, ".header-content {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 1;\n  height: 85px;\n  background-color: #f4f4f4;\n  border-bottom: 1px solid #dedede;\n}\n.header-content .navbar-header {\n  text-align: left;\n}\n.header-content img {\n  height: 80px;\n  margin: 3px 0 0 8px;\n}\n.body-content {\n  margin-top: 100px;\n}\n@media (max-width: 767px) {\n  .header-content .navbar-header {\n    text-align: center;\n  }\n  .body-content {\n    padding-top: 50px;\n  }\n}\n", ""]);
 
 // exports
 
@@ -5493,7 +5875,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "table.results {\r\n    min-width: 500px;\r\n}\r\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -5502,16 +5884,128 @@ exports.push([module.i, "table.results {\r\n    min-width: 500px;\r\n}\r\n", ""]
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".main-nav {\n  position: fixed;\n  top: 85px;\n  left: 0;\n  right: 0;\n  z-index: 1;\n}\n.main-nav li .glyphicon {\n  margin-right: 10px;\n}\n.main-nav li.link-active a,\n.main-nav li.link-active a:hover,\n.main-nav li.link-active a:focus {\n  background-color: #4189C7;\n  color: white;\n}\n@media (min-width: 768px) {\n  .main-nav {\n    top: 100px;\n    width: calc(25% - 30px);\n    min-width: 180px;\n  }\n  .main-nav .navbar {\n    border-radius: 0 15px 15px 0;\n    border-width: 0px;\n    height: 100%;\n  }\n  .main-nav .navbar a {\n    width: 100%;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  .main-nav .navbar ul {\n    float: none;\n  }\n  .main-nav .navbar li {\n    float: none;\n    font-size: 15px;\n    margin: 6px;\n  }\n  .main-nav .navbar li a {\n    padding: 10px 16px;\n    border-radius: 4px;\n  }\n  .main-nav .navbar-header {\n    float: none;\n  }\n  .main-nav .navbar-collapse {\n    padding: 0px;\n  }\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".question-edit {\n  width: 80%;\n}\n@media (max-width: 767px) {\n  .question-edit {\n    width: 100%;\n  }\n}\n.question-edit textarea {\n  min-height: 100px;\n}\n.question-edit .commands {\n  margin-top: 20px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".table thead tr th {\n  border-bottom: 2px solid #ecf0f1;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".quiz-edit {\n  width: 80%;\n}\n@media (max-width: 767px) {\n  .quiz-edit {\n    width: 100%;\n  }\n}\n.quiz-edit textarea {\n  min-height: 100px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".panel {\n  margin-bottom: 12px;\n}\n.panel .panel-heading {\n  color: #fefefe;\n}\n.panel .panel-heading .glyphicon {\n  float: right;\n  font-size: 41px;\n  color: #d6d6d6;\n}\n.panel .panel-body {\n  padding: 0;\n}\n.panel .panel-body .list-group {\n  margin: 0;\n}\n.panel .panel-body .list-group .list-group-item {\n  padding: 6px;\n  overflow: auto;\n  cursor: pointer;\n}\n.panel .panel-body .list-group .list-group-item:hover {\n  background-color: #dae9f5;\n}\n.panel .panel-body .list-group .list-group-item:hover:before {\n  display: inline-block;\n  font-family: 'Glyphicons Halflings';\n  content: \"\\E013\";\n  float: right;\n  font-size: 30px;\n  margin: 4px 5px 0 0;\n  color: #60a777;\n}\n.panel .panel-body .list-group .list-group-item img {\n  display: block;\n  float: left;\n  width: 50px;\n  height: 50px;\n  background-color: #ffffff;\n  border: 1px solid #707d8c;\n  padding: 2px;\n  margin: 0 6px 0 0;\n}\n.panel.latest {\n  border-color: #384a5d;\n}\n.panel.latest .panel-heading {\n  background-color: #384a5d;\n}\n.panel.latest .panel-heading .glyphicon:before {\n  content: \"\\E162\";\n}\n.panel.byTitle {\n  border-color: #4b657f;\n}\n.panel.byTitle .panel-heading {\n  background-color: #4b657f;\n}\n.panel.byTitle .panel-heading .glyphicon:before {\n  content: \"\\E151\";\n}\n.panel.random {\n  border-color: #617992;\n}\n.panel.random .panel-heading {\n  background-color: #617992;\n}\n.panel.random .panel-heading .glyphicon:before {\n  content: \"\\E104\";\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".navbar-form.search-header {\n  display: none;\n}\n.navbar-form.search-navmenu {\n  display: block;\n  border: 0;\n  margin: 2px 0 0 0;\n  padding: 5px;\n  float: left;\n  width: calc(100% - 80px);\n  max-width: calc(100% - 80px);\n  min-width: 250px;\n}\n.navbar-form.search-navmenu .form-group {\n  float: left;\n  margin: 0 10px 0 0;\n}\n.navbar-form.search-navmenu .form-group input[type=\"text\"] {\n  width: 180px;\n}\n@media (min-width: 768px) {\n  .navbar-form.search-header {\n    display: block;\n    margin: 20px 0 0 20px;\n  }\n  .navbar-form.search-navmenu {\n    display: none;\n  }\n  .navbar-form.search-navmenu input[type=\"text\"] {\n    width: 180px;\n  }\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".quiz {\n  position: relative;\n  padding: 0;\n  text-align: center;\n  width: 80%;\n}\n@media (max-width: 767px) {\n  .quiz {\n    width: 100%;\n  }\n}\n.quiz .quiz-details .quiz-image {\n  position: relative;\n  z-index: 1;\n  width: 100%;\n  text-align: center;\n}\n.quiz .quiz-details .quiz-image img {\n  width: 150px;\n  height: 150px;\n  clear: both;\n  margin: auto;\n  position: relative;\n  background-color: #ffffff;\n  border: 1px solid #707d8c;\n  padding: 2px;\n}\n.quiz .quiz-details .quiz-info-block {\n  width: 100%;\n  border-radius: 20px;\n  position: absolute;\n  top: 80px;\n  background: #f0f0f0;\n  z-index: 0;\n  padding: 60px 0 30px 0;\n}\n.quiz .quiz-details .quiz-info-block .quiz-heading {\n  width: 100%;\n  text-align: center;\n  margin: 10px 0 0;\n}\n.quiz .quiz-details .quiz-info-block .navigation {\n  margin: 20px 15px 0px 15px;\n  padding: 0;\n  list-style: none;\n  border-bottom: 1px solid #a3aab1;\n}\n.quiz .quiz-details .quiz-info-block .navigation li {\n  display: inline-block;\n  margin: 0 0 -6px 0;\n  padding: 0;\n}\n.quiz .quiz-details .quiz-info-block .navigation li a {\n  background: transparent;\n  border-radius: 10px 10px 0 0;\n  padding: 10px 30px;\n  float: left;\n}\n.quiz .quiz-details .quiz-info-block .navigation li.active a {\n  background: #4189C7;\n  color: #fff;\n}\n.quiz .quiz-details .quiz-info-block .quiz-body {\n  padding: 20px 20px 30px 20px;\n}\n.quiz .quiz-details .quiz-info-block .quiz-body .tab-content h4 {\n  width: 100%;\n  margin: 10px 0;\n  color: #333;\n}\n.quiz .quiz-details .quiz-info-block .commands {\n  border-top: 1px solid #dddddd;\n  width: 80%;\n  padding: 15px 0 0 0;\n  margin: 15px auto 0 auto;\n}\n.quiz .quiz-details .quiz-info-block .commands .btn {\n  min-width: 140px;\n  margin: 0 10px;\n}\n.quiz .quiz-details .quiz-info-block .commands .edit {\n  border-top: 1px solid #dddddd;\n  width: 80%;\n  padding: 15px 0 0 0;\n  margin: 15px auto 0 auto;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".table thead tr th {\n  border-bottom: 2px solid #ecf0f1;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
 module.exports = {
-  XmlEntities: __webpack_require__(43),
-  Html4Entities: __webpack_require__(42),
+  XmlEntities: __webpack_require__(51),
+  Html4Entities: __webpack_require__(50),
   Html5Entities: __webpack_require__(6),
   AllHtmlEntities: __webpack_require__(6)
 };
 
 
 /***/ }),
-/* 42 */
+/* 50 */
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -5664,7 +6158,7 @@ module.exports = Html4Entities;
 
 
 /***/ }),
-/* 43 */
+/* 51 */
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -5825,91 +6319,97 @@ module.exports = XmlEntities;
 
 
 /***/ }),
-/* 44 */
+/* 52 */
 /***/ (function(module, exports) {
 
 module.exports = "<h2>{{title}}</h2>\r\n<div>\r\n    TestMakerFree: a production-ready, fully featured SPA example powered by ASP.Net Core and Angular\r\n</div>";
 
 /***/ }),
-/* 45 */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>{{title}}</h2>\r\n<div class=\"answer-edit\">\r\n    <div>\r\n        <label for=\"text\">Anser text:</label>\r\n        <br />\r\n        <textarea id=\"text\" [(ngModel)]=\"answer.Text\" placeholder=\"enter a suitable text...\"></textarea>\r\n    </div>\r\n    <div>\r\n        <label for=\"value\">Score Value:</label>\r\n        <br />\r\n        <select id=\"value\" [(ngModel)]=\"answer.Value\">\r\n            <option *ngFor=\"let num of [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\"\r\n                    [value]=\"num\">{{num}}</option>\r\n        </select>\r\n    </div>\r\n    <div>\r\n        <input *ngIf=\"editMode\" type=\"button\" value=\"Apply Changes\" (click)=\"onSubmit(answer)\"/>\r\n        <input *ngIf=\"!editMode\" type=\"button\" value=\"Create the Answer!\" (click)=\"onSubmit(answer)\"/>\r\n        <input type=\"button\" value=\"Cancel\" (click)=\"onBack()\"/>\r\n    </div>\r\n</div>";
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports) {
-
-module.exports = "<h3>Answers</h3>\r\n<div *ngIf=\"answers.length > 0\">\r\n    <table class=\"answers\">\r\n        <thead>\r\n            <tr>\r\n                <th>Text</th>\r\n                <th>Value</th>\r\n                <th></th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr *ngFor=\"let answer of answers\">\r\n                <td>{{answer.Text}}</td>\r\n                <td>{{answer.Value}}</td>\r\n                <td>\r\n                    <input type=\"button\" value=\"Edit\" (click)=\"onEdit(answer)\" />\r\n                    <input type=\"button\" value=\"Delete\" (click)=\"onDelete(answer)\" />\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n<div *ngIf=\"answers.length == 0\">\r\n    This question has no answers(yet):\r\n    Click the <strong>Add a new Answer</strong> button to add the first one!\r\n</div>\r\n<input type=\"button\" value=\"Add a new Answer\" (click)=\"onCreate()\"/>";
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class='container-fluid'>\r\n    <div class='row'>\r\n        <div class='col-sm-3'>\r\n            <nav-menu></nav-menu>\r\n        </div>\r\n        <div class='col-sm-9 body-content'>\r\n            <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>Welcome to TestMakerFree</h1>\r\n<p>A sample SPA project made with .Net Core and Angular.</p>\r\n<quiz-list class=\"latest\"></quiz-list>\r\n<quiz-list class=\"byTitle\"></quiz-list>\r\n<quiz-list class=\"random\"></quiz-list>";
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>{{title}}</h2>\r\n<div>\r\n    TO-DO: Not implemented yet.\r\n</div>";
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-inverse'>\r\n        <div class='navbar-header'>\r\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\r\n                <span class='sr-only'>Toggle navigation</span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n            </button>\r\n            <a class='navbar-brand' [routerLink]=\"['/home']\">TestMakerFreeWebApp</a>\r\n        </div>\r\n        <div class='clearfix'></div>\r\n        <div class='navbar-collapse collapse'>\r\n            <ul class='nav navbar-nav'>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/home']\">\r\n                        <span class='glyphicon glyphicon-home'></span> Home\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/about']\">\r\n                        <span class=\"glyphicon glyphicon-info-sign\"></span>About\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/login']\">\r\n                        <span class=\"glyphicon glyphicon-log-in\"></span> Login\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['quiz/create']\">\r\n                        <span class=\"glyphicon glyphicon-log-in\"></span>Create Quiz\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>{{title}}</h2>\r\n<div>\r\n    Oops... This page does not exist (yet!).\r\n</div>";
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>{{title}}</h2>\r\n<div class=\"question-edit\">\r\n    <div>\r\n        <label for=\"text\">Question Text:</label>\r\n        <br/>\r\n        <textarea id=\"text\" [(ngModel)]=\"question.Text\" placeholder=\"Enter a suitable text...\"></textarea>\r\n    </div>\r\n    <div>\r\n        <input *ngIf=\"editMode\" type=\"button\" value=\"Apply Changes\" (click)=\"onSubmit(question)\"/>\r\n        <input *ngIf=\"!editMode\" type=\"button\" value=\"Create the Question!\" (click)=\"onSubmit(question)\"/>\r\n        <input type=\"button\" value=\"Cancel\" (click)=\"onBack()\"/>\r\n    </div>\r\n    <answer-list *ngIf=\"editMode\" [question]=\"question\"></answer-list>\r\n</div>";
-
-/***/ }),
 /* 53 */
 /***/ (function(module, exports) {
 
-module.exports = "<h3>Questions</h3>\r\n<div *ngIf=\"questions.length > 0\">\r\n    <table class=\"questions\">\r\n        <thead>\r\n            <tr>\r\n                <th>Text</th>\r\n                <th>Options</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr *ngFor=\"let question of questions\">\r\n                <td>{{question.Text}}</td>\r\n                <td>\r\n                    <input type=\"button\" value=\"Edit\" (click)=\"onEdit(question)\" />\r\n                    <input type=\"button\" value=\"Delete\" (click)=\"onDelete(question)\" />\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n<div *ngIf=\"questions.length == 0\">\r\n    This quiz has no questions (yet):\r\n    click the <strong>Add a new Question</strong> button to add the first one!\r\n</div>\r\n<input type=\"button\" value=\"Add a new Question\" (click)=\"onCreate()\"/>";
+module.exports = "<h2>{{title}}</h2>\r\n<div class=\"answer-edit\">\r\n    <div class=\"form-group\">\r\n        <label for=\"text\">Anser text:</label>\r\n        <br />\r\n        <textarea id=\"text\" [(ngModel)]=\"answer.Text\" placeholder=\"enter a suitable text...\" class=\"form-control\"></textarea>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"value\">Score Value:</label>\r\n        <br />\r\n        <select id=\"value\" [(ngModel)]=\"answer.Value\" class=\"form-control\">\r\n            <option *ngFor=\"let num of [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\"\r\n                    [value]=\"num\">{{num}}</option>\r\n        </select>\r\n    </div>\r\n    <div>\r\n        <button *ngIf=\"editMode\" (click)=\"onSubmit(answer)\" class=\"btn btn-sm btn-success\">\r\n            <span class=\"glyphicon glyphicon-save\"></span>\r\n            Apply Changes\r\n        </button>\r\n        <button *ngIf=\"!editMode\" (click)=\"onSubmit(answer)\" class=\"btn btn-sm btn-success\">\r\n            <span class=\"glyphicon glyphicon-save\"></span>\r\n            Create the Answer!\r\n        </button>\r\n        <button (click)=\"onBack()\" class=\"btn btn-sm btn-primary\">\r\n            Cancel\r\n        </button>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 54 */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\r\n<div class=\"quiz-edit\">\r\n    <div>\r\n        <label for=\"title\">Quiz title:</label>\r\n        <br />\r\n        <input type=\"text\" id=\"title\" [(ngModel)]=\"quiz.Title\" placeholder=\"choose a title...\"/>\r\n    </div>\r\n    <div>\r\n        <label for=\"description\">Quiz description:</label>\r\n        <br />\r\n        <input type=\"text\" id=\"description\" [(ngModel)]=\"quiz.Description\" placeholder=\"enter a description\" />\r\n    </div>\r\n    <div>\r\n        <label for=\"text\">Quiz informative text:</label>\r\n        <br />\r\n        <textarea id=\"text\" [(ngModel)]=\"quiz.Text\" placeholder=\"enter a text...\"></textarea>\r\n    </div>\r\n    <div>\r\n        <input *ngIf=\"editMode\" type=\"button\" value=\"Apply Changes\" (click)=\"onSubmit(quiz)\" />\r\n        <input *ngIf=\"!editMode\" type=\"button\" value=\"Create the Quiz!\" (click)=\"onSubmit(quiz)\" />\r\n        <input type=\"button\" value=\"Cancel\" (click)=\"onBack()\" />\r\n    </div>\r\n    <question-list [quiz]=\"quiz\" *ngIf=\"editMode\"></question-list>\r\n    <result-list *ngIf=\"editMode\" [quiz]=\"quiz\"></result-list>\r\n</div>";
+module.exports = "<h3>Answers</h3>\r\n<div *ngIf=\"answers.length > 0\">\r\n    <div class=\"table-responsive\">\r\n        <table class=\"table table-hover answers\">\r\n            <thead>\r\n                <tr>\r\n                    <th>Text</th>\r\n                    <th>Value</th>\r\n                    <th></th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr *ngFor=\"let answer of answers\">\r\n                    <td>{{answer.Text}}</td>\r\n                    <td>{{answer.Value}}</td>\r\n                    <td>\r\n                        <button (click)=\"onEdit(answer)\" class=\"btn btn-xs btn-warning\">\r\n                            <span class=\"glyphicon glyphicon-edit\"></span>\r\n                            Edit\r\n                        </button>\r\n                        <button (click)=\"onDelete(answer)\" class=\"btn btn-xs btn-danger\">\r\n                            <span class=\"glyphicon glyphicon-remove\"></span>\r\n                            Delete\r\n                        </button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</div>\r\n<div *ngIf=\"answers.length == 0\">\r\n    This question has no answers(yet):\r\n    Click the <strong>Add a new Answer</strong> button to add the first one!\r\n</div>\r\n<button (click)=\"onCreate()\" class=\"btn btn-sm btn-primary\">\r\n    <span class=\"glyphicon glyphicon-plus\"></span>\r\n    Add a new Answer\r\n</button>";
 
 /***/ }),
 /* 55 */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\r\n<ul class=\"quizzes\">\r\n    <li *ngFor=\"let quiz of quizzes\"\r\n        [class.selected]=\"quiz===selectedQuiz\"\r\n        (click)=\"onSelect(quiz)\">\r\n        <span>{{quiz.Title}}</span>\r\n    </li>\r\n</ul>";
+module.exports = "<div class='container-fluid'>\r\n    <div class=\"row\">\r\n        <nav class=\"navbar header-content\">\r\n            <div class=\"container-fluid\">\r\n                <div class=\"navbar-header\">\r\n                    <a [routerLink]=\"['/home']\">\r\n                        <img src=\"/dist/res/img/logo.svg\" alt=\"TestMakerFree\"/>\r\n                    </a>\r\n                </div>\r\n                <quiz-search class=\"search-header\" placeholder=\"Search for a quiz...\"></quiz-search>\r\n            </div>\r\n        </nav>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-3\">\r\n            <nav-menu></nav-menu>\r\n        </div>\r\n        <div class=\"col-sm-9 body-content\">\r\n            <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
 /* 56 */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"quiz\" class=\"quiz\">\r\n    <h2>{{quiz.Title}}</h2>\r\n    <ul>\r\n        <li>\r\n            <label>Title:</label>\r\n            <input [(ngModel)]=\"quiz.Title\" placeholder=\"Insert the title...\"/>\r\n        </li>\r\n        <li>\r\n            <label>Description:</label>\r\n            <textarea [(ngModel)]=\"quiz.Description\" placeholder=\"Insert a suitable description...\"></textarea>\r\n        </li>\r\n    </ul>\r\n    <div>\r\n        <input type=\"button\" value=\"Edit\" (click)=\"onEdit()\"/>\r\n        <input type=\"button\" value=\"Delete this Quiz\" (click)=\"onDelete()\"/>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-4\">\r\n        <quiz-list class=\"latest\"></quiz-list>\r\n    </div>\r\n    <div class=\"col-lg-4\">\r\n        <quiz-list class=\"byTitle\"></quiz-list>\r\n    </div>\r\n    <div class=\"col-lg-4\">\r\n        <quiz-list class=\"random\"></quiz-list>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 57 */
 /***/ (function(module, exports) {
 
-module.exports = "<h3>Results</h3>\r\n<div *ngIf=\"results.length > 0\">\r\n    <table class=\"results\">\r\n        <thead>\r\n            <tr>\r\n                <th>Text</th>\r\n                <th>Min. Value</th>\r\n                <th>Max. Value</th>\r\n                <th>Options</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr *ngFor=\"let result of results\">\r\n                <td>{{result.Text}}</td>\r\n                <td *ngIf=\"result.MinValue ===null\">N/A</td>\r\n                <td *ngIf=\"result.MinValue !==null\">{{result.MinValue}}</td>\r\n                <td *ngIf=\"result.MaxValue ===null\">N/A</td>\r\n                <td *ngIf=\"result.MaxValue !==null\">{{result.MaxValue}}</td>\r\n                <td>\r\n                    <input type=\"button\" value=\"Edit\" (click)=\"onEdit(result)\" />\r\n                    <input type=\"button\" value=\"Delete\" (click)=\"onDelete(result)\" />\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n<div *ngIf=\"results.length == 0\">\r\n    This quiz has no results (yet): click the <strong>Add a new Result</strong> button\r\n    to add the first one!\r\n</div>\r\n<input type=\"button\" value=\"Add a New Result\" (click)=\"onCreate()\"/>";
+module.exports = "<h2>{{title}}</h2>\r\n<div>\r\n    TO-DO: Not implemented yet.\r\n</div>";
 
 /***/ }),
 /* 58 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-default'>\r\n        <div class='navbar-header'>\r\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\r\n                <span class='sr-only'>Toggle navigation</span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n            </button>\r\n            <quiz-search class=\"search-navmenu\" placeholder=\"Type here...\"></quiz-search>\r\n        </div>\r\n        <div class='clearfix'></div>\r\n        <div class='navbar-collapse collapse'>\r\n            <ul class='nav navbar-nav'>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/home']\">\r\n                        <span class='glyphicon glyphicon-home'></span> Home\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/about']\">\r\n                        <span class=\"glyphicon glyphicon-info-sign\"></span>About\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/login']\">\r\n                        <span class=\"glyphicon glyphicon-log-in\"></span> Login\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['quiz/create']\">\r\n                        <span class=\"glyphicon glyphicon-plus\"></span>Create Quiz\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>{{title}}</h2>\r\n<div>\r\n    Oops... This page does not exist (yet!).\r\n</div>";
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>{{title}}</h2>\r\n<div class=\"question-edit\">\r\n    <div class=\"form-group\">\r\n        <label for=\"text\">Question Text:</label>\r\n        <br/>\r\n        <textarea id=\"text\" [(ngModel)]=\"question.Text\" placeholder=\"Enter a suitable text...\" class=\"form-control\"></textarea>\r\n    </div>\r\n    <div>\r\n        <button *ngIf=\"editMode\" (click)=\"onSubmit(question)\" class=\"btn btn-sm btn-success\">\r\n            <span class=\"glyphicon glyphicon-save\"></span>\r\n            Apply Changes\r\n        </button>\r\n        <button *ngIf=\"!editMode\" (click)=\"onSubmit(question)\" class=\"btn btn-sm btn-success\">\r\n            <span class=\"glyphicon glyphicon-plus\"></span>\r\n            Create the Question!\r\n        </button>\r\n        <input type=\"button\" value=\"Cancel\" (click)=\"onBack()\" class=\"btn btn-sm btn-primary\"/>\r\n    </div>\r\n    <answer-list *ngIf=\"editMode\" [question]=\"question\"></answer-list>\r\n</div>";
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports) {
+
+module.exports = "<h3>Questions</h3>\r\n<div *ngIf=\"questions.length > 0\">\r\n    <div class=\"table-responsive\">\r\n        <table class=\"table table-hover questions\">\r\n            <thead>\r\n                <tr>\r\n                    <th>Text</th>\r\n                    <th>Options</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr *ngFor=\"let question of questions\">\r\n                    <td>{{question.Text}}</td>\r\n                    <td>\r\n                        <button (click)=\"onEdit(question)\" class=\"btn btn-xs btn-warning\">\r\n                            <span class=\"glyphicon glyphicon-edit\"></span>\r\n                            Edit\r\n                        </button>\r\n                        <button (click)=\"onDelete(question)\" class=\"btn btn-xs btn-danger\">\r\n                            <span class=\"glyphicon glyphicon-remove\"></span>\r\n                            Delete\r\n                        </button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</div>\r\n<div *ngIf=\"questions.length == 0\">\r\n    This quiz has no questions (yet):\r\n    click the <strong>Add a new Question</strong> button to add the first one!\r\n</div>\r\n<button (click)=\"onCreate()\" class=\"btn btn-sm btn-primary\">\r\n    <span class=\"glyphicon glyphicon-plus\"></span>\r\n    Add a new Question\r\n</button>";
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"quiz-edit\">\r\n    <h2>{{title}}</h2>\r\n    <div class=\"form-group\">\r\n        <label for=\"title\">Quiz title:</label>\r\n        <br />\r\n        <input type=\"text\" id=\"title\" [(ngModel)]=\"quiz.Title\" placeholder=\"choose a title...\" class=\"form-control\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"description\">Quiz description:</label>\r\n        <br />\r\n        <input type=\"text\" id=\"description\" [(ngModel)]=\"quiz.Description\" placeholder=\"enter a description\" class=\"form-control\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"text\">Quiz informative text:</label>\r\n        <br />\r\n        <textarea id=\"text\" [(ngModel)]=\"quiz.Text\" placeholder=\"enter a text...\" class=\"form-control\"></textarea>\r\n    </div>\r\n    <div class=\"form-group commands\">\r\n        <input *ngIf=\"editMode\" type=\"button\" value=\"Apply Changes\" (click)=\"onSubmit(quiz)\" class=\"btn btn-success\"/>\r\n        <input *ngIf=\"!editMode\" type=\"button\" value=\"Create the Quiz!\" (click)=\"onSubmit(quiz)\" class=\"btn btn-success\"/>\r\n        <input type=\"button\" value=\"Cancel\" (click)=\"onBack()\" class=\"btn btn-default\"/>\r\n    </div>\r\n    <question-list *ngIf=\"editMode\" [quiz]=\"quiz\"></question-list>\r\n    <result-list *ngIf=\"editMode\" [quiz]=\"quiz\"></result-list>\r\n</div>";
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"panel panel-primary {{class}}\">\r\n    <div class=\"panel-heading\">\r\n        <span class=\"glyphicon\"></span>\r\n        <h4>{{title}}</h4>\r\n    </div>\r\n    <div class=\"panel-body\">\r\n        <ul class=\"list-group\">\r\n            <li class=\"list-group-item\" *ngFor=\"let quiz of quizzes\" [class.selected]=\"quiz===selectedQuiz\" (click)=\"onSelect(quiz)\">\r\n                <img src=\"https://lorempixel.com/50/50/?random={{quiz.Id}}\" alt=\"{{quiz.Title}}\" class=\"img-circle\"/>\r\n                <span>{{quiz.Title}}</span>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports) {
+
+module.exports = "<form class=\"navbar-form navbar-left {{class}}\" role=\"search\">\r\n    <div class=\"form-group\">\r\n        <input type=\"text\" class=\"form-control\" placeholder=\"{{placeholder}}\" />\r\n    </div>\r\n    <button type=\"submit\" class=\"btn btn-default\">Submit</button>\r\n</form>";
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"quiz\">\r\n    <div class=\"quiz-details\">\r\n        <div class=\"quiz-image\">\r\n            <img src=\"https://lorempixel.com/150/150/?random={{quizId}}\" alt=\"{{quiz.Title}}\" class=\"img-circle\" />\r\n        </div>\r\n        <div class=\"quiz-info-block\">\r\n            <div class=\"quiz-heading\">\r\n                <h2>{{quiz.Title}}</h2>\r\n                <span class=\"help-block\">{{quiz.Description}}</span>\r\n                <!--<span class=\"help-block\"> Created by User # on {{quiz.CreatedDate}}</span>-->\r\n            </div>\r\n            <ul class=\"navigation\">\r\n                <li class=\"active\">\r\n                    <a data-toggle=\"tab\" href=\"#description\">\r\n                        <span class=\"glyphicon glyphicon-user\"></span>\r\n                        &nbsp;Description\r\n                    </a>\r\n                </li>\r\n                <li>\r\n                    <a data-toggle=\"tab\" href=\"#stats\">\r\n                        <span class=\"glyphicon glyphicon-stats\"></span>\r\n                        &nbsp;Stats\r\n                    </a>\r\n                </li>\r\n                <li>\r\n                    <a data-toggle=\"tab\" href=\"#share\">\r\n                        <span class=\"glyphicon glyphicon-share-alt\"></span>\r\n                        &nbsp;Share\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n            <div class=\"quiz-body\">\r\n                <div class=\"tab-content\">\r\n                    <div id=\"description\" class=\"tab-pane active\">{{quiz.Text}}</div>\r\n                    <div id=\"stats\" class=\"tab-pane\">TO-DO</div>\r\n                    <div id=\"share\" class=\"tab-pane\">TO-DO</div>\r\n                </div>\r\n            </div>\r\n            <div class=\"commands\">\r\n                <a [routerLink]=\"['/quiz', quiz.Id, 'take']\" class=\"btn btn-success\">\r\n                    <span class=\"glyphicon glyphicon-education\"></span>\r\n                    &nbsp;Take the Test!\r\n                </a>\r\n                <a [routerLink]=\"['/home']\" class=\"btn btn-default\">\r\n                    <span class=\"glyphicon glyphicon-backward\"></span>\r\n                    &nbsp;Back\r\n                </a>\r\n                <div class=\"edit\">\r\n                    <input type=\"button\" value=\"Edit\" (click)=\"onEdit()\" class=\"btn btn-sm btn-danger\"/>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports) {
+
+module.exports = "<h3>Results</h3>\r\n<div *ngIf=\"results.length > 0\">\r\n    <div class=\"table-responsive\">\r\n        <table class=\"table table-hover results\">\r\n            <thead>\r\n                <tr>\r\n                    <th>Text</th>\r\n                    <th>Min. Value</th>\r\n                    <th>Max. Value</th>\r\n                    <th>Options</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr *ngFor=\"let result of results\">\r\n                    <td>{{result.Text}}</td>\r\n                    <td *ngIf=\"result.MinValue ===null\">N/A</td>\r\n                    <td *ngIf=\"result.MinValue !==null\">{{result.MinValue}}</td>\r\n                    <td *ngIf=\"result.MaxValue ===null\">N/A</td>\r\n                    <td *ngIf=\"result.MaxValue !==null\">{{result.MaxValue}}</td>\r\n                    <td>\r\n                        <button (click)=\"onEdit(result)\" class=\"btn btn-xs btn-warning\">\r\n                            <span class=\"glyphicon glyphicon-edit\"></span>\r\n                            Edit\r\n                        </button>\r\n                        <button (click)=\"onDelete(result)\" class=\"btn btn-xs btn-danger\">\r\n                            <span class=\"glyphicon glyphicon-remove\"></span>\r\n                            Delete\r\n                        </button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</div>\r\n<div *ngIf=\"results.length == 0\">\r\n    This quiz has no results (yet): click the <strong>Add a new Result</strong> button\r\n    to add the first one!\r\n</div>\r\n<button (click)=\"onCreate()\" class=\"btn btn-sm btn-primary\">\r\n    <span class=\"glyphicon glyphicon-plus\"></span>\r\n    Add a New Result\r\n</button>";
+
+/***/ }),
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {/*! *****************************************************************************
@@ -7037,15 +7537,15 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(80), __webpack_require__(88)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12), __webpack_require__(16)))
 
 /***/ }),
-/* 59 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ansiRegex = __webpack_require__(13)();
+var ansiRegex = __webpack_require__(19)();
 
 module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
@@ -7053,105 +7553,7 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(30);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(31);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(32);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(33);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(34);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(35);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(36);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -7165,7 +7567,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -7179,7 +7581,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -7193,7 +7595,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -7207,7 +7609,119 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 71 */
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(41);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(42);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(43);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(44);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(45);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(46);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(47);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(48);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -7236,7 +7750,7 @@ for (var key in styles) {
   clientOverlay.style[key] = styles[key];
 }
 
-var ansiHTML = __webpack_require__(12);
+var ansiHTML = __webpack_require__(18);
 var colors = {
   reset: ['transparent', 'transparent'],
   black: '181818',
@@ -7251,7 +7765,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(41).AllHtmlEntities;
+var Entities = __webpack_require__(49).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -7292,7 +7806,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 72 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7444,307 +7958,73 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 73 */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if(!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-/* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-// If obj.hasOwnProperty has been overridden, then calling
-// obj.hasOwnProperty(prop) will break.
-// See: https://github.com/joyent/node/issues/1707
-function hasOwnProperty(obj, prop) {
-  return Object.prototype.hasOwnProperty.call(obj, prop);
-}
-
-module.exports = function(qs, sep, eq, options) {
-  sep = sep || '&';
-  eq = eq || '=';
-  var obj = {};
-
-  if (typeof qs !== 'string' || qs.length === 0) {
-    return obj;
-  }
-
-  var regexp = /\+/g;
-  qs = qs.split(sep);
-
-  var maxKeys = 1000;
-  if (options && typeof options.maxKeys === 'number') {
-    maxKeys = options.maxKeys;
-  }
-
-  var len = qs.length;
-  // maxKeys <= 0 means that we should not limit keys count
-  if (maxKeys > 0 && len > maxKeys) {
-    len = maxKeys;
-  }
-
-  for (var i = 0; i < len; ++i) {
-    var x = qs[i].replace(regexp, '%20'),
-        idx = x.indexOf(eq),
-        kstr, vstr, k, v;
-
-    if (idx >= 0) {
-      kstr = x.substr(0, idx);
-      vstr = x.substr(idx + 1);
-    } else {
-      kstr = x;
-      vstr = '';
-    }
-
-    k = decodeURIComponent(kstr);
-    v = decodeURIComponent(vstr);
-
-    if (!hasOwnProperty(obj, k)) {
-      obj[k] = v;
-    } else if (isArray(obj[k])) {
-      obj[k].push(v);
-    } else {
-      obj[k] = [obj[k], v];
-    }
-  }
-
-  return obj;
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-
-/***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-var stringifyPrimitive = function(v) {
-  switch (typeof v) {
-    case 'string':
-      return v;
-
-    case 'boolean':
-      return v ? 'true' : 'false';
-
-    case 'number':
-      return isFinite(v) ? v : '';
-
-    default:
-      return '';
-  }
-};
-
-module.exports = function(obj, sep, eq, name) {
-  sep = sep || '&';
-  eq = eq || '=';
-  if (obj === null) {
-    obj = undefined;
-  }
-
-  if (typeof obj === 'object') {
-    return map(objectKeys(obj), function(k) {
-      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
-      if (isArray(obj[k])) {
-        return map(obj[k], function(v) {
-          return ks + encodeURIComponent(stringifyPrimitive(v));
-        }).join(sep);
-      } else {
-        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
-      }
-    }).join(sep);
-
-  }
-
-  if (!name) return '';
-  return encodeURIComponent(stringifyPrimitive(name)) + eq +
-         encodeURIComponent(stringifyPrimitive(obj));
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-function map (xs, f) {
-  if (xs.map) return xs.map(f);
-  var res = [];
-  for (var i = 0; i < xs.length; i++) {
-    res.push(f(xs[i], i));
-  }
-  return res;
-}
-
-var objectKeys = Object.keys || function (obj) {
-  var res = [];
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
-  }
-  return res;
-};
-
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.decode = exports.parse = __webpack_require__(74);
-exports.encode = exports.stringify = __webpack_require__(75);
-
-
-/***/ }),
-/* 77 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(0);
 
 /***/ }),
-/* 78 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(28);
 
 /***/ }),
-/* 79 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(3);
 
 /***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(1))(39);
-
-/***/ }),
-/* 81 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(41);
 
 /***/ }),
-/* 82 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(43);
 
 /***/ }),
-/* 83 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(45);
 
 /***/ }),
-/* 84 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(50);
 
 /***/ }),
-/* 85 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(6);
 
 /***/ }),
-/* 86 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(75);
 
 /***/ }),
-/* 87 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(78);
 
 /***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(1))(8);
-
-/***/ }),
-/* 89 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(80);
 
 /***/ }),
-/* 90 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
